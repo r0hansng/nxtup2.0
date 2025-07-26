@@ -4,7 +4,7 @@ const App = () => {
   return (
     <>
       <span className="text-red-500">Working</span>
-      <Button variant="" size="">
+      <Button variant="filled" size="">
         <span>Continue with google</span>
       </Button>
     </>

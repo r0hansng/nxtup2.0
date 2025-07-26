@@ -28,7 +28,7 @@ const buttonVariants = cva(
     }
 )
 
-function Button({ className, variant = "default", size = "md", children, ...props }) {
+const Button = ({ className, variant = "default", size = "md", children, ...props }) => {
     return (
         <button className={cn(buttonVariants({ variant, size }), className)} {...props}>
             {children}
@@ -38,8 +38,8 @@ function Button({ className, variant = "default", size = "md", children, ...prop
 
 Button.propTypes = {
     className: PropTypes.string,
-    variant: PropTypes.oneOf(["default", "outline"]),
-    size: PropTypes.oneOf(["sm", "md", "lg"]),
+    variant: PropTypes.oneOf(["default", "filled", "icon"]),
+    size: PropTypes.oneOf(["sm", "md", "lg"], "xl"),
     children: PropTypes.node,
 }
 
