@@ -5,7 +5,7 @@ import { cn } from '../../../utils/cn';
 const inputVariants = cva('transition-all duration-300', {
   variants: {
     variant: {
-      default:
+      text:
         'border border-outline rounded-xs h-[44px] py-2 px-3 focus:outline-none focus:ring-1 focus:ring-offset-1',
       checkbox: 'w-fit h-fit accent-outline w-4 h-4 rounded-xs ',
       radio: 'w-fit h-fit  accent-outline w-4 h-4 rounded-xs '
@@ -23,7 +23,7 @@ const inputVariants = cva('transition-all duration-300', {
 });
 const Input = ({
   className,
-  variant = 'default',
+  variant = 'text',
   size = 'xl',
   children,
   ...props
@@ -71,7 +71,7 @@ const Input = ({
 
 Input.propTypes = {
   className: PropTypes.string,
-  variant: PropTypes.oneOf(['default', 'outline']),
+  variant: PropTypes.oneOf(['text', 'checkbox', 'radio']),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.node
 };
