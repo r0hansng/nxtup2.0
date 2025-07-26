@@ -1,17 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import {
   IconChevronDown,
-  IconBrandReact,
-  IconBrandVue,
-  IconBrandSvelte,
 } from "@tabler/icons-react";
 
-const DropDown = () => {
-  const options = [
-    { label: "React", value: "react", icon: <IconBrandReact size={16} /> },
-    { label: "Vue", value: "vue", icon: <IconBrandVue size={16} /> },
-    { label: "Svelte", value: "svelte", icon: <IconBrandSvelte size={16} /> },
-  ];
+const DropDown = (props) => {
+  
 
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(null);
@@ -34,32 +27,29 @@ const DropDown = () => {
   };
 
   return (
-    <div className="p-10">
-      <div className="relative w-64" ref={dropdownRef}>
+      <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="flex w-full items-center justify-between rounded-md border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex w-full items-center justify-between rounded-xs border border-outline bg-brand-white px-4 py-3 text-sm text-gray-700 shadow-sm focus:outline-none"
         >
-          <span className="truncate">{selected?.label || "Select a framework"}</span>
-          <IconChevronDown size={18} className="text-gray-500" />
+          <span className="truncate">{selected?.label || "Choose an option"}</span>
+          <IconChevronDown size={18} className="text-text-primary" />
         </button>
 
         {isOpen && (
-          <div className="absolute z-10 mt-2 w-full rounded-md border border-gray-200 bg-white shadow-lg">
-            {options.map((option) => (
+          <div className="absolute z-10 mt-2 w-full rounded-xs border border-gray-1 bg-white ">
+            {props.options.map((option) => (
               <div
                 key={option.value}
                 onClick={() => handleSelect(option)}
-                className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-3 text-sm text-text-primary hover:bg-gray-3 cursor-pointer"
               >
-                {option.icon && <span>{option.icon}</span>}
                 {option.label}
               </div>
             ))}
           </div>
         )}
       </div>
-    </div>
   );
 };
 
