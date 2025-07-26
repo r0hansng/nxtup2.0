@@ -3,15 +3,15 @@ import Button from "../ui/Button/Button"
 
 const navigationLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Events', path: '/events' },
+    { name: 'Competitions', path: '/competitions' },
+    { name: 'Workshops', path: '/workshops' },
+    { name: 'Conferences', path: '/conferences' }
 ]
 
 const NavBar = () => {
     return (
-        <div className='flex justify-between container mx-auto items-center select-none mt-6'>
+        <div className='flex justify-between container mx-auto items-center select-none mt-2 border-b py-4 border-outline'>
             <h1 className='text-4xl font-black font-brand'>NXTUP</h1>
             <ul className='flex gap-8 font-franklin text-xl text-text-primary'>
                 {

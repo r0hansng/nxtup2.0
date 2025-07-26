@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 
 const navigationLinks = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
-  { name: 'Portfolio', path: '/portfolio' },
-  { name: 'Contact', path: '/contact' }
+  { name: 'Events', path: '/events' },
+  { name: 'Competitions', path: '/competitions' },
+  { name: 'Workshops', path: '/workshops' },
+  { name: 'Conferences', path: '/conferences' }
 ]
 
 
@@ -25,15 +25,15 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto my-4'>
       <div>
         <hr className='border-gray-2 border-3' />
         <hr className='border-gray-2 mt-1' />
       </div>
 
-      <div>
+      <div className='text-text-primary border-b py-8 border-gray-1'>
         {/* Header */}
-        <h1 className='font-brand text-2xl my-4'>NXTUP</h1>
+        <h1 className='font-brand text-2xl mb-4 text-brand-black'>NXTUP</h1>
         <div className='flex gap-14'>
           {/* Navigation */}
           <div className='flex flex-col gap-4'>
@@ -131,6 +131,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <p className='text-center w-full py-8 font-roboto-slab text-text-secondary'>Made with love by <span><a className="hover:underline" href="https://devclub-wbsite.vercel.app">DevClub, NST&lt;&gt;RU</a></span></p>
     </div>
   )
 }

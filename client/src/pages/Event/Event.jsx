@@ -3,7 +3,7 @@ import Button from '../../components/ui/Button/Button'
 
 const Event = () => {
     return (
-        <div className='my-16 container flex flex-col mx-auto items-center justify-center w-fit'>
+        <div className='my-16 container flex flex-col mx-auto items-center justify-center w-fit text-text-brand'>
 
             {/* Event Hero */}
             <div className='w-xl text-left flex flex-col gap-2'>
