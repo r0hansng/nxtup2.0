@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@theme {
+  --color-outlines-shadows: hsla(0, 0%, 1%, 1);
+  --color-text-primary: hsla(0, 7%, 1%, 1);
+  --color-text-secondary: hsla(0, 0%, 35%, 1);
+  --color-brand-white: hsla(100, 100%, 100%, 1);
+  --color-brand-black: hsla(0, 0%, 0%, 1);
+  --color-gray-1: hsla(0, 0%, 1%, 0.15);
+  --color-gray-2: hsla(0, 0%, 1%, 0.3);
+  --color-brand-red: hsla(352, 99%, 44%, 1);
+}
