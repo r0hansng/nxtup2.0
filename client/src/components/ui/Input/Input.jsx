@@ -6,7 +6,7 @@ const inputVariants = cva('transition-all duration-300', {
   variants: {
     variant: {
       default:
-        'border-2 border-outline rounded-xs h-[44px] py-2 px-3 focus:outline-none focus:ring-1 focus:ring-offset-1',
+        'border border-outline rounded-xs h-[44px] py-2 px-3 focus:outline-none focus:ring-1 focus:ring-offset-1',
       checkbox: 'w-fit h-fit accent-outline w-4 h-4 rounded-xs ',
       radio: 'w-fit h-fit  accent-outline w-4 h-4 rounded-xs '
     },
